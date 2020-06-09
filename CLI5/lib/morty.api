@@ -1,0 +1,22 @@
+require 'open-uri'
+require 'net/http'
+require 'json'
+require 'pry'
+require 'awesome_print'
+
+class MortyApi
+BASE_URL = 'https://rickandmortyapi/character/?name=morty'
+
+def self.get_mortys 
+uri = URI.parse(BASE_URL)
+response = Net::HTTP.get_response(uri)
+body = response.body
+json = JSON.parse(body)
+
+binding.pry 
+end 
+end 
+
+MortyApi.get_mortys
+
+

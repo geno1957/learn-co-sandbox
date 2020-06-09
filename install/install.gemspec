@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "cli/version"
+require "install/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "cli"
-  spec.version       = Cli::VERSION
+  spec.name          = "install"
+  spec.version       = Install::VERSION
   spec.authors       = ["'Jared  E'"]
   spec.email         = ["'jared.epps322@gmail.com'"]
 
@@ -38,4 +38,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.0"
 end

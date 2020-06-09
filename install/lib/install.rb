@@ -1,6 +1,6 @@
-require "cli/version"
+require "install/version"
 
-module Cli
+module Install
   class Error < StandardError; end
   # Your code goes here...
 end
